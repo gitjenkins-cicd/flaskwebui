@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
+import PyMysql
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@192.168.10.229:3306/codethunder'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:strongpassword@localhost:3306/codethunder'
 db = SQLAlchemy(app)
 
 
