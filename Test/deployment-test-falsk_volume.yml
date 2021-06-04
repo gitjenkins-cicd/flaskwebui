@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployflaskappnewvolume
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskappnewvolume
+  template:
+    metadata:
+      labels:
+        app: flaskappnewvolume
+    spec:
+      containers:
+      - image: 127.0.0.1:5000/testflasknew
+        name: flaskappnew
+        volumeMounts:
+         - mountPath: /opt
+           name: test-volume
+      volumes:
+      - name: test-volume
+        hostPath:
+          path: /home/shakeer/Docker/Tutorialspoint/Flasksql/Test/
+          type: Directory

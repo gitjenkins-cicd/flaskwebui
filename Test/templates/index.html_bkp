@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title of my page</title>
+</head>
+<body>
+<img src="{{ url_for('static', filename='shakeerwork1.jpeg') }}">
+<img src="{{ url_for('static', filename='shakeerwork2.jpeg') }}">
+<img src="{{ url_for('static', filename='shakeerwork3.jpeg') }}">
+<img src="{{ url_for('static', filename='shakeerwork4.jpeg') }}">
+<img src="{{ url_for('static', filename='shakeerpic.jpeg') }}">
+
+<h1>Hi I am {{ name2 }}!</h1>
+<p>Photo Collections</p>
+<p>Hope you will like this video!</p>
+
+</body>
+</html>
