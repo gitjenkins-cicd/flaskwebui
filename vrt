@@ -7,3 +7,6 @@ docker run -d -p 8080:8080 --env-file=env regressionfrontend-v1:latest
 
 build command
  docker build -t regressionbackend-prisma-v1 .
+ 
+ 
+ https://github.com/shakeerdcm/visualregressiontracket.git
