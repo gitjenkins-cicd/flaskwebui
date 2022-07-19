@@ -29,7 +29,7 @@
               "module": "chaosk8s.deployment.actions",
               "func": "delete_deployment",
               "arguments": {
-                "name": "nginx"
+                "name": "nginx-deployment"
               }
             }
           }          
