@@ -35,7 +35,7 @@
                 }
             },
             "pauses": {
-                "after": 20
+                "after": 2
             }
         }
     ]
