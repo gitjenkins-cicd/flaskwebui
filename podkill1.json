@@ -30,12 +30,12 @@
                 "func": "terminate_pods",
                 "arguments": {
                     "label_selector": "app=nginx",
-                    "name_pattern": "nginx-[0-9].*$",
+                    "name_pattern": "nginx-deployment-[0-9].*$",
                     "rand": true
                 }
             },
             "pauses": {
-                "after": 10
+                "after": 20
             }
         }
     ]
