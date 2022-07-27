@@ -4,7 +4,8 @@ pipeline {
 	
 	parameters {
 		
-	   choice(name: 'CHOICES', choices: ['Dev', 'QA', 'UAT'], description: 'Please Select One') ;
+	   choice(name: 'project_id', choices: ['Dev', 'QA', 'UAT'], description: 'Please Select One') ;
+	   string(name: 'icmpno', defaultValue: '1234', description: 'provide ticket no')
 	
 	}
 	
