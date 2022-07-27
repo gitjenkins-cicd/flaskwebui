@@ -4,9 +4,9 @@ pipeline {
 	
 	parameters {
 	    
-       string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file')		
+           string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file');		
 	   choice(name: 'project_id', choices: ['Dev', 'QA', 'UAT'], description: 'Please Select One') ;
-	   string(name: 'icmpno', defaultValue: '1234', description: 'provide ticket no')
+	   string(name: 'icmpno', defaultValue: '1234', description: 'provide ticket no');
 	
 	}
 	
