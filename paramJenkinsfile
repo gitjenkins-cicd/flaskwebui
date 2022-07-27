@@ -11,6 +11,9 @@ pipeline {
 	stages {
 	
 	  stage ('git clone') {
+		steps {
+		  echo "cloning git repo"
+		}
 	  
 	  }
 	}
