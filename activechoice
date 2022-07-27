@@ -66,6 +66,7 @@ pipeline {
                                     script: 
                                         [$class: 'GroovyScript', 
                                         script: 'return["Could not get AMi Information"]', 
+                                        sandbox: true, 
                                         script: [
                                             script: '''
                                                     if (Env.equals("dev")){
