@@ -1,0 +1,1 @@
+cat bzt.log |grep -A 500 "Test duration:"|sed '/Done performing with code/,$d'
