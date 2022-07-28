@@ -6,8 +6,7 @@ pipeline {
                 steps {
                     script {
                     properties(
-		    	 string(name: 'taurusinputymlfile',defaultValue: '',description: 'please provide valid yml file')
-		       [
+		    	[
                             parameters(
 			       
 			    [
