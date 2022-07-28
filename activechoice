@@ -11,7 +11,7 @@ pipeline {
                                     description: 'Select the Project from the Dropdown List', 
                                     filterLength: 1, 
                                     filterable: false, 
-                                    name: 'Project', 
+                                    name: 'Projectid', 
                                     script: [
                                         $class: 'GroovyScript', 
                                         fallbackScript: [
@@ -32,25 +32,25 @@ pipeline {
                                     choiceType: 'PT_SINGLE_SELECT', 
                                     description: 'Select the BQ Table details from the Dropdown List',
                                     name: 'BQTable', 
-                                    referencedParameters: 'Project', 
+                                    referencedParameters: 'Projectid', 
                                     script: 
                                         [$class: 'GroovyScript', 
                                         fallbackScript: [
                                                 classpath: [], 
                                                 sandbox: true, 
-                                                script: "return['Could not get Environment from Project Param']"
+                                                script: "return['Could not get Environment from Projectid Param']"
                                                 ], 
                                         script: [
                                                 classpath: [], 
                                                 sandbox: true, 
                                                 script: '''
-                                                if (Project.equals("Autobotnpe")){
+                                                if (Projectid.equals("Autobotnpe")){
                                                     return["Autobotmetrics", "Autobotmetricserror"]
                                                 }
-                                                else if(Project.equals("Acronpe")){
+                                                else if(Projectid.equals("Acronpe")){
                                                     return["Acrometrics", "Acrometricserror"]
                                                 }
-                                                else if(Project.equals("Datafabric")){
+                                                else if(Projectid.equals("Datafabric")){
                                                     return["Datafabricmetrics", "DataFabricerror"]
                                                 }
                                                 '''
