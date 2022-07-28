@@ -1,7 +1,7 @@
 pipeline {
     agent any
        parameters {
-            string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file');
+            string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file')
        }
         stages {
             stage('Parameters'){
