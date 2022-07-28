@@ -38,19 +38,19 @@ pipeline {
                                         fallbackScript: [
                                                 classpath: [], 
                                                 sandbox: true, 
-                                                script: "return['Could not get Environment from Env Param']"
+                                                script: "return['Could not get Environment from Project Param']"
                                                 ], 
                                         script: [
                                                 classpath: [], 
                                                 sandbox: true, 
                                                 script: '''
-                                                if (Env.equals("Autobotnpe")){
+                                                if (Project.equals("Autobotnpe")){
                                                     return["Autobotmetrics", "Autobotmetricserror"]
                                                 }
-                                                else if(Env.equals("Acronpe")){
+                                                else if(Project.equals("Acronpe")){
                                                     return["Acrometrics", "Acrometricserror"]
                                                 }
-                                                else if(Env.equals("Datafabric")){
+                                                else if(Project.equals("Datafabric")){
                                                     return["Datafabricmetrics", "DataFabricerror"]
                                                 }
                                                 '''
