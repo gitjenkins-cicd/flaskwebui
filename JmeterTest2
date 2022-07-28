@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+        stages {
+            
+			stage('BQ Test'){
+                steps {
+                    script {
+					   echo "project and table details are: ${Projectid},${BQTable},${taurusfile}" 
+					}
+				}
+			}
+        }   
+}
