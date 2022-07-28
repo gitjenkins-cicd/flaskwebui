@@ -12,14 +12,7 @@ pipeline {
                                     filterLength: 1, 
                                     filterable: false, 
                                     name: 'Env', 
-                                    script: [
-                                        $class: 'GroovyScript', 
-                                        fallbackScript: [
-                                            classpath: [], 
-                                            sandbox: true, 
-                                            script: 
-                                                "return['Could not get The environemnts']"
-                                        ], 
+                                    
                                         script: [
                                             classpath: [], 
                                             sandbox: true, 
@@ -33,13 +26,7 @@ pipeline {
                                     description: 'Select the AMI from the Dropdown List',
                                     name: 'AMI List', 
                                     referencedParameters: 'Env', 
-                                    script: 
-                                        [$class: 'GroovyScript', 
-                                        fallbackScript: [
-                                                classpath: [], 
-                                                sandbox: true, 
-                                                script: "return['Could not get Environment from Env Param']"
-                                                ], 
+                                    
                                         script: [
                                                 classpath: [], 
                                                 sandbox: true, 
@@ -63,10 +50,7 @@ pipeline {
                                     description: 'Select the  AMI based on the following information', 
                                     name: 'Image Information', 
                                     referencedParameters: 'Env', 
-                                    script: 
-                                        [$class: 'GroovyScript', 
-                                        script: 'return["Could not get AMi Information"]', 
-                                        sandbox: true, 
+                                    
                                         script: [
                                         sandbox: true, 
                                             script: '''
