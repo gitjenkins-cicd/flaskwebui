@@ -6,11 +6,10 @@ pipeline {
                 steps {
                     script {
                     properties(
+		    	 string(name: 'taurusinputymlfile',defaultValue: '',description: 'please provide valid yml file')
 		       [
                             parameters(
-			        string(name: 'taurusinputymlfile',
-				defaultValue: '',
-				description: 'please provide valid yml file')
+			       
 			    [
                                 [$class: 'ChoiceParameter', 
                                     choiceType: 'PT_SINGLE_SELECT', 
