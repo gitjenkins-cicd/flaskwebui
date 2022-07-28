@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    	parameters {
-		string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file')
-	}
-      
+    	      
         stages {
             stage('Parameters'){
                 steps {
@@ -30,7 +27,7 @@ pipeline {
                                         ], 
                                         script: [
                                             classpath: [], 
-                                            sandbox: false, 
+                                            sandbox: true, 
                                             script: 
                                                 "return['Autobotnpe','Acronpe','Datafabric']"
                                         ]
@@ -50,7 +47,7 @@ pipeline {
                                                 ], 
                                         script: [
                                                 classpath: [], 
-                                                sandbox: false, 
+                                                sandbox: true, 
                                                 script: '''
                                                 if (Projectid.equals("Autobotnpe")){
                                                     return["Autobotmetrics", "Autobotmetricserror"]
@@ -67,6 +64,7 @@ pipeline {
                                 ]
                                 
                             ])
+			    string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file');
                         ])
                     }
                 }
