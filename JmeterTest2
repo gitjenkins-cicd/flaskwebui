@@ -2,12 +2,23 @@ pipeline {
     agent any
         stages {
             
-			stage('BQ Test'){
+	   stage('BQ Test'){
                 steps {
                     script {
-					   echo "project and table details are: ${Projectid},${BQTable},${taurusfile}" 
-					}
-				}
+			 echo "project and table details are: ${Projectid},${BQTable},${taurusfile}" 
+					   
 			}
+		     }
+	       }
+	       
+	    stage('git clone '){
+                steps {
+                    script {
+			 echo "cloning git repo"
+			 sh "git clone ${gitrepo}"
+					   
+			}
+		     }
+	       }
         }   
 }
