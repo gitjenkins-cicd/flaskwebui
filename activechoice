@@ -63,8 +63,9 @@ pipeline {
                                 ]
                                 
                             ])
-			    string(name: 'taurusinputymlfile', defaultValue: '' , description: 'please provide valid yml file');
+			    
                         ])
+			
                     }
                 }
             }
