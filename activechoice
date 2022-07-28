@@ -19,7 +19,7 @@ pipeline {
                                             script: 
                                                 "return['dev','stage','prod']"
                                         ]
-                                    ]
+                                    
                                 ],
                                 [$class: 'CascadeChoiceParameter', 
                                     choiceType: 'PT_SINGLE_SELECT', 
@@ -42,7 +42,7 @@ pipeline {
                                                 }
                                                 '''
                                             ] 
-                                    ]
+                                    
                                 ],
                                
                                  [$class: 'DynamicReferenceParameter', 
