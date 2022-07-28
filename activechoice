@@ -30,9 +30,9 @@ pipeline {
                                 ],
                                 [$class: 'CascadeChoiceParameter', 
                                     choiceType: 'PT_SINGLE_SELECT', 
-                                    description: 'Select the AMI from the Dropdown List',
-                                    name: 'AMI List', 
-                                    referencedParameters: 'Env', 
+                                    description: 'Select the BQ Table details from the Dropdown List',
+                                    name: 'BQTable', 
+                                    referencedParameters: 'Project', 
                                     script: 
                                         [$class: 'GroovyScript', 
                                         fallbackScript: [
@@ -44,14 +44,14 @@ pipeline {
                                                 classpath: [], 
                                                 sandbox: true, 
                                                 script: '''
-                                                if (Env.equals("dev")){
-                                                    return["ami-sd2345sd", "ami-asdf245sdf", "ami-asdf3245sd"]
+                                                if (Env.equals("Autobotnpe")){
+                                                    return["Autobotmetrics", "Autobotmetricserror"]
                                                 }
-                                                else if(Env.equals("stage")){
-                                                    return["ami-sd34sdf", "ami-sdf345sdc", "ami-sdf34sdf"]
+                                                else if(Env.equals("Acronpe")){
+                                                    return["Acrometrics", "Acrometricserror"]
                                                 }
-                                                else if(Env.equals("prod")){
-                                                    return["ami-sdf34sdf", "ami-sdf34ds", "ami-sdf3sf3"]
+                                                else if(Env.equals("Datafabric")){
+                                                    return["Datafabricmetrics", "DataFabricerror"]
                                                 }
                                                 '''
                                             ] 
