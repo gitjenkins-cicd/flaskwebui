@@ -8,23 +8,23 @@ pipeline {
                             parameters([
                                 [$class: 'ChoiceParameter', 
                                     choiceType: 'PT_SINGLE_SELECT', 
-                                    description: 'Select the Environemnt from the Dropdown List', 
+                                    description: 'Select the Project from the Dropdown List', 
                                     filterLength: 1, 
                                     filterable: false, 
-                                    name: 'Env', 
+                                    name: 'Project', 
                                     script: [
                                         $class: 'GroovyScript', 
                                         fallbackScript: [
                                             classpath: [], 
                                             sandbox: true, 
                                             script: 
-                                                "return['Could not get The environemnts']"
+                                                "return['Could not get The Project Details']"
                                         ], 
                                         script: [
                                             classpath: [], 
                                             sandbox: true, 
                                             script: 
-                                                "return['dev','stage','prod']"
+                                                "return['Autobotnpe','Acronpe','Datafabric']"
                                         ]
                                     ]
                                 ],
