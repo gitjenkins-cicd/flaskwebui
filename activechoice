@@ -67,7 +67,7 @@ pipeline {
 			stage('BQ Test'){
                 steps {
                     script {
-					   echo "project and table details are: ${Project},${BQTable}" 
+					   echo "project and table details are: ${Projectid},${BQTable}" 
 					}
 				}
 			}
