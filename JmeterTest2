@@ -16,6 +16,7 @@ pipeline {
                     script {
 			 echo "cloning git repo"
 			 sh "git clone ${gitrepo}"
+			 sh "ls -lrth"
 					   
 			}
 		     }
