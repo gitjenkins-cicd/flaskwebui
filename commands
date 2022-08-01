@@ -1,1 +1,5 @@
+For Error reporting
 cat bzt.log |grep -A 500 "Test duration:"|sed '/Done performing with code/,$d'
+
+replacing non integer columns
+awk 'BEGIN{FS=OFS=","} $4 ~ /^[a-zA-Z]+/ {$4=700}1' kpi.csv
