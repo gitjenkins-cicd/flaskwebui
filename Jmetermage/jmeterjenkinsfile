@@ -1,1 +1,18 @@
-
+pipeline {
+    agent any
+	
+	stages {
+	
+	  stage ('git clone') {
+		steps {
+		  echo "cloning git repo"
+		  echo "selected project and ticket no are: ${project_id},${icmpno}"
+		}
+	  
+	  }
+    stage(build and push docker to gcr) {
+      
+      
+    }
+	}
+}
