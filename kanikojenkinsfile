@@ -1,9 +1,10 @@
 pipeline {
-    agent any
-	
+    agent  {
+     	label any
 	}
+  
 	
- stages {	
+stages {	
    stage ("git clone") {
      steps {
 	   echo "git clone"
