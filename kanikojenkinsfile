@@ -49,7 +49,7 @@ stages {
 		  }
 	    }
 	    steps {
-	       sh "echo building through kaniko"
+	       echo "building through kaniko"
 	      }
 	}
 
