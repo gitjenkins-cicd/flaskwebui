@@ -15,7 +15,7 @@ stages {
 	  agent {
 	      kubernetes {
 		    
-			yaml: """
+			yaml: '''
 			apiVersion: v1
 			kind: Pod
 			spec:
@@ -43,7 +43,7 @@ stages {
 					items:
 					- key: .dockerconfigjson
 					  path: config.json
-			""".stripIndent()
+			'''
 		    
 		  
 		  }
