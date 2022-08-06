@@ -13,7 +13,7 @@ stages {
 
 	stage ("Run kubernetes pod kaniko") {
 	  agent {
-	      kubernetes {
+	      label any {
 		    
 			yaml: '''
 			apiVersion: v1
