@@ -48,6 +48,9 @@ stages {
 		  
 		  }
 	    }
+	    steps {
+	       sh "echo building through kaniko"
+	      }
 	}
 
 }
